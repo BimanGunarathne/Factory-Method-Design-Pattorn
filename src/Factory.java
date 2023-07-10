@@ -1,13 +1,24 @@
 import resource.*;
 
 public class Factory {
+    private static Factory factory = null;
+    private Factory() {}
+    public static Factory getInstance() {
+        if (factory == null) {
+            factory = new Factory();
+        }
+        return factory;
+    }
     public Vehicle getVehicle(VehicleType vehicleType) {
-        if (vehicleType.name().equals("Car")) {
-            return new Car();
-        } else if (vehicleType.name().equals("Bus")) {
-            return new Bus();
-        }else {
-            return new Van();
+        switch (vehicleType) {
+            case CAR:
+                return new Car();
+            case VAN:
+                return new Van();
+            case BUS:
+                return new Bus();
+            default:
+                return null;
         }
     }
 }

@@ -2,8 +2,8 @@ import resource.*;
 
 public class Demo2 {
     public static void main(String[] args) {
-        Vehicle car = new Factory().getVehicle(VehicleType.CAR);
-        Vehicle van = new Factory().getVehicle(VehicleType.VAN);
-        Vehicle bus = new Factory().getVehicle(VehicleType.BUS);
+        Vehicle car = Factory.getInstance().getVehicle(VehicleType.CAR);
+        Vehicle van = Factory.getInstance().getVehicle(VehicleType.VAN);
+        Vehicle bus = Factory.getInstance().getVehicle(VehicleType.BUS);
     }
 }
