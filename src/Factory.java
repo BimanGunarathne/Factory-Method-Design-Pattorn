@@ -1,13 +1,10 @@
-import resource.Bus;
-import resource.Car;
-import resource.Van;
-import resource.Vehicle;
+import resource.*;
 
 public class Factory {
-    public Vehicle getVehicle(String vehicleType) {
-        if (vehicleType.equals("Car")) {
+    public Vehicle getVehicle(VehicleType vehicleType) {
+        if (vehicleType.name().equals("Car")) {
             return new Car();
-        } else if (vehicleType.equals("Bus")) {
+        } else if (vehicleType.name().equals("Bus")) {
             return new Bus();
         }else {
             return new Van();

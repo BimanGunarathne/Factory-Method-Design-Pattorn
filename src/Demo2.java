@@ -1,12 +1,9 @@
-import resource.Bus;
-import resource.Car;
-import resource.Van;
-import resource.Vehicle;
+import resource.*;
 
 public class Demo2 {
     public static void main(String[] args) {
-        Vehicle car = new Factory().getVehicle("Car");
-        Vehicle van = new Factory().getVehicle("Van");
-        Vehicle bus = new Factory().getVehicle("Bus");
+        Vehicle car = new Factory().getVehicle(VehicleType.CAR);
+        Vehicle van = new Factory().getVehicle(VehicleType.VAN);
+        Vehicle bus = new Factory().getVehicle(VehicleType.BUS);
     }
 }
